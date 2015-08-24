@@ -1,0 +1,128 @@
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[icelandic]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{graphicx}
+%\author{Arnar Ingi Halldórsson}
+%\title{Linear Motion}
+
+
+%\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{ {myndir/} }
+\usepackage[T1]{fontenc} 
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc} 
+\usepackage{graphics}
+%\usepackage[pdftex]{graphicx}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[top=2in, bottom=1.5in, left=1in, right=1in]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Verkfræðileg Forritun - H2015}
+\lhead{Háskólinn í Reykjavík}
+\chead{DTV - 01}
+\rfoot{Page \thepage}
+
+
+
+\begin{document}
+
+
+\section*{Verkefni 1:}
+
+Skrifið forrit sem biður notandann um tvær heiltölur. Forritið á síðan að sýna niðurstöðurnar þar sem eftirfarandir virkjar eru notaðir á tölurnar: +, -, *, /, \%
+
+
+
+\begin{lstlisting}[language=Python, caption = Example]
+
+Please write two numbers: 
+5 
+4 
+5 + 4 = 9 
+5 - 4 = 1 
+5 * 4 = 20 
+5 / 4 = 1  
+5 \% 4 = 1
+\end{lstlisting}
+
+\section*{Verkefni 2:}
+
+Skrifið forrit sem skoðar samleitni á tveimur röðum. 
+Raðirnar eru summur frá i = 1 upp í n.
+$$ \sum_{i = 1}^{n} \frac{1}{i^2}  $$
+$$ \sum_{i = 1}^{n} \frac{1}{2^i} $$
+
+Til að skoða samleitnina þá viljum við leyfa notandanum að velja n, og leggja saman allar tölur í röðinni frá i upp í n.
+Biðjið notandann um heiltölu, þ.e.a.s n, sem segir til um hversu margar ítranir á að taka og prentið út niðurstöðuna fyrir báðar summurnar. Þið megið ráða hvort þið notið while-lykkju eða for-lykkju til að leysa þetta.
+(Hint: Ef þið notið lykkju með teljara í, þá er hver þáttur í fyrri röðinni bara $1.0/(i*i))$.
+Fyrir seinni röðina þá er gott að upphafsstilla nefnara sem 0.5, og margfalda með 0.5 í hverri ítrun í stað þess að reikna $1.0/(2^i)$ sérstaklega.)
+
+\begin{lstlisting}[language=Python, caption = Example]
+
+How many iterations?
+20
+Sum of geometric series 1: 1.59366
+Sum of geometric series 2: 0.999998
+\end{lstlisting}
+
+
+\section*{Verkefni 3:}
+Búið til forrit sem tekur inn eina heiltölu og prentar hvort talan er frumtala (e. prime number), en prentar að talan sé ekki frumtala. (Frumtölur eru tölur sem eru aðeins deilanlegar með 1 og sjálfum sér).\\
+Dæmi um frumtölur eru t.d. $2,3,5,7,13 ..$
+
+\begin{lstlisting}[language=Python, caption = Example]
+
+Enter a number
+5
+5 is not a prime number!
+
+------
+Enter a number
+13
+13 is a prime number!
+
+\end{lstlisting}
+
+
+
+
+\end{document}
